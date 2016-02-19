@@ -15,13 +15,14 @@ defmodule Pigeon.Mixfile do
   end
 
   def application do
-    [applications: [:logger, :httpoison],
+    [applications: [:logger, :httpoison, :chatterbox],
     mod: {Pigeon, []}]
   end
 
   defp deps do
     [{:poison, "~> 1.5"},
-    {:httpoison, "~> 0.7.2"}]
+     {:httpoison, "~> 0.7.2"},
+     {:chatterbox, git: "https://github.com/joedevivo/chatterbox.git"}]
   end
 
   defp description do
